@@ -1,0 +1,11 @@
+<% teas.forEach(tea => { %>
+    <div class="cart">
+        <div class="cart-context">
+            <img src="/<%= tea.path_img %>" alt="Картинка сочного чая">
+            <div class="cart-name"><%= tea.name %></div>
+            <div class="cart-price">от <%= tea.price %> руб.</div>
+            <a href="/product/<%= tea.id %>"><button class="cart-info cart-btn">Подробнее</button></a>
+            <button class="cart-buy cart-btn">Купить</button>
+        </div>
+    </div>
+<% }) %>

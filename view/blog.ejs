@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header/header.css">
+    <link rel="stylesheet" href="css/footer/footer.css">
+    <link rel="stylesheet" href="css/catalog/blog.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+<%- include('header.ejs') %>
+
+<main>
+
+    <h1>БЛОГ</h1>
+    <section class="search">
+        <input type="text" placeholder="Введите ваш запрос">
+        <button type="button">Найти</button>
+    </section>
+    <section class="blogs">
+        <div class="blog">
+            <img src="image/header/slide-lg-1.png" class="lg" alt="...">
+            <img src="image/header/slide-md-1.png" class="md" alt="...">
+            <img src="image/header/slide-sm-1.png" class="sm" alt="...">
+        </div>
+        <div class="blog">
+            <img src="image/header/slide-lg-2.png" class="lg" alt="...">
+            <img src="image/header/slide-md-2.png" class="md" alt="...">
+            <img src="image/header/slide-sm-2.png" class="sm" alt="...">
+        </div>
+        <div class="blog">
+            <img src="image/header/slide-lg-3.png" class="lg" alt="...">
+            <img src="image/header/slide-md-3.png" class="md" alt="...">
+            <img src="image/header/slide-sm-3.png" class="sm" alt="...">
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="copy">©2023 заварушка</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>

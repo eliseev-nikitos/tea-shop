@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header/header.css">
+    <link rel="stylesheet" href="css/footer/footer.css">
+    <link rel="stylesheet" href="css/catalog/registration.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+<%- include('header.ejs') %>
+
+<main>
+    <h1>регистрация</h1>
+
+    <form>
+
+        <input type="tel" id="phone" name="phone" placeholder="Номер телефона" required>
+        <input type="email" id="email" name="email" placeholder="Электронный адрес" required>
+
+        <input type="password" id="password" name="password" placeholder="Пароль" required>
+        <input type="password" id="password-con" name="password-con" placeholder="Подтвердите пароль" required>
+
+        <button type="submit" class="btn1">Зарегистрироваться</button>
+
+        <p>Уже зарегистрированы?</p>
+        <a href="/auth" class="auth">Вход ></a>
+    </form>
+
+
+</main>
+<footer>
+    <div class="copy">©2023 заварушка</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/registration.js"></script>
+</body>
+</html>

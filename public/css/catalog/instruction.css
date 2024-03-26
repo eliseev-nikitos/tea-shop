@@ -1,0 +1,177 @@
+/* main */
+
+
+h1 {
+    font-family: 'Arkhip', serif;
+    color: #96A479;
+    margin-top: 50px;
+}
+
+.instruction {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    row-gap: 20px;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: auto 1fr;
+    row-gap: 10px;
+
+    grid-template-areas: "name icon" "text icon";
+}
+
+.name {
+    grid-area: name;
+    font-family: 'Steppe', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #96A479;
+}
+
+.step-text {
+    grid-area: text;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+}
+
+img {
+    grid-area: icon;
+    align-self: center;
+    justify-self: center;
+}
+
+.comment {
+    margin-top: 50px;
+}
+
+.comment-head {
+    font-family: 'Steppe', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #96A479;
+
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    max-width: 600px;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+}
+
+h2  {
+    font-family: 'Arkhip', serif;
+    color: #96A479;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+
+    .instruction {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        row-gap: 20px;
+    }
+
+    .step {
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 1fr 70px;
+        row-gap: 0;
+
+        grid-template-areas: "name" "text" "icon";
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    .step-text {
+        grid-area: text;
+        margin: 0;
+    }
+
+    img {
+        grid-area: icon;
+        align-self: center;
+        justify-self: center;
+        
+        transform: rotate(90deg);
+    }
+
+    .comment {
+        margin-top: 50px;
+    }
+
+    .comment-head {
+        font-family: 'Steppe', serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #96A479;
+
+        margin-bottom: 10px;
+    }
+
+    .comment-text {
+        max-width: 600px;
+        font-family: 'Steppe', serif;
+        font-size: 14px;
+    }
+
+    h2  {
+        font-family: 'Arkhip', serif;
+        color: #96A479;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .step {
+        grid-template-rows: 60px 1fr 70px;
+    }
+    
+}
+
+
+form {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    gap: 15px;
+}
+
+#name {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #96A479;
+    padding: 10px;
+}
+
+#message {
+    border-radius: 10px;
+    border: 1px solid #96A479;
+    padding: 20px;
+}
+
+button {
+    width: 240px;
+    height: 70px;
+
+    border-radius: 20px;
+    border: 1px solid #96A479;
+    font-family: 'Steppe', serif;
+    font-size: 18px;
+
+    background-color: #96A479;
+    color: white;
+}

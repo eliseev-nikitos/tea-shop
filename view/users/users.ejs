@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/header/header.css">
+    <link rel="stylesheet" href="/css/footer/footer.css">
+    <link rel="stylesheet" href="/css/users.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+<%- include('./../header.ejs') %>
+
+<main>
+    <h1>Здравствуйте, <span class="one-name"></span>, ваш id = <span class="one-id"></span></h1>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Телефон</th>
+            <th>Логин</th>
+            <th>Роль</th>
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% users.forEach(function(user) { %>
+            <tr data-user-id="<%= user.id %>">
+                <td class="id"><%= user.id %></td>
+                <td class="phone"><%= user.phone %></td>
+                <td class="login"><%= user.login %></td>
+                <td class="role"><%= user.role %></td>
+                <td class="btn-controllers">
+                    <button class="btn-user-change" data-user-id="<%= user.id %>">Изменить</button>
+                    <button class="btn-user-save no-active" data-user-id="<%= user.id %>">Сохранить</button>
+                    <button class="btn-user-delete" data-user-id="<%= user.id %>">Удалить</button>
+                </td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+</section>
+</main>
+
+<footer>
+    <div class="copy">©2023 заварушка</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/users.js"></script>
+</body>
+</html>

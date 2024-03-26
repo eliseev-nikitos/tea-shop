@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Продукт</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/header/header.css">
+    <link rel="stylesheet" href="/css/footer/footer.css">
+    <link rel="stylesheet" href="/css/catalog/product.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+<%- include('header.ejs') %>
+
+<main>
+
+    <h1><%= tea.name %></h1>
+    <section class="main-content">
+        <div class="block">
+            <img src="/<%= tea.path_img %>" alt="Картинка сочного чая" class="product-img">
+            <% if (role === 'Администратор') { %>
+                <br>
+                <button class="btn change-btn" data-id="<%= tea.id %>">Изменить</button>
+                <button class="btn delete-btn" data-id="<%= tea.id %>">Удалить</button>
+            <% } %>
+        </div>
+
+        <div class="product-content">
+            <a href="/instruction" class="instruction">Инструкция по завариванию чая ></a>
+            <div class="product-price">
+                <p>Выберите размер упаковки:</p>
+                <div class="price">
+                    <button class="product-weight active">100г</button>
+                    <button class="product-weight">500г</button>
+                    <button class="product-weight">1000г</button>
+                    <button class="product-weight">2000г</button>
+                    <div class="end-price"><span class="change-price"><%= tea.price %></span> руб.</div>
+                </div>
+            </div>
+            <div class="product-info">
+               <p>
+                   <%= tea.info %>
+               </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="copy">©2023 заварушка</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/priceFix.js"></script>
+<script src="/js/oneTea.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* footer */
+
+footer {
+    height: 80px;
+    background-color: #96A479;
+
+    margin-top: 40px;
+    display: flex;
+
+    background-image: url("../../image/footer/list-1.png"),
+    url("../../image/footer/list-2.png"), url("../../image/footer/list-3.png"), url("../../image/footer/list-4.png"),
+    url("../../image/footer/list-5.png"), url("../../image/footer/list-6.png"), url("../../image/footer/list-3.png"), url("../../image/footer/list-1.png");
+
+    background-repeat: no-repeat;
+    background-position: 0 20px, 300px -40px, 600px 10px, 850px -20px, 1000px 40px, 1100px -20px, 1300px 0, 1600px 0;
+}
+
+.copy {
+    font-family: 'Arkhip', serif;
+    color: white;
+    margin-left: 40px;
+    font-size: 30px;
+    align-self: center;
+}
+
+@media screen and (max-width: 400px) {
+    .copy {
+        font-size: 26px;
+    }
+}

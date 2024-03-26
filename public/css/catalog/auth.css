@@ -1,0 +1,91 @@
+a {
+    text-underline: none;
+    color: #96A479;
+    text-decoration: none;
+
+    font-family: 'Steppe', serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: 'Arkhip', serif;
+    color: #96A479;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+}
+
+form {
+    display: grid;
+    grid-template-columns: 180px 120px;
+    grid-template-areas: "login login" "password password" "text1 btn" "text2 reg";
+    row-gap: 20px;
+
+    align-items: center;
+}
+
+input {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #96A479;
+    outline: none;
+    color: #96A479;
+    padding: 4px 0 4px 15px;
+
+}
+
+input::placeholder {
+    color: #96A479;
+}
+
+#username {
+    grid-area: login;
+}
+
+#password {
+    grid-area: password;
+}
+
+.text1 {
+    grid-area: text1;
+}
+
+button {
+    grid-area: btn;
+    width: 100px;
+    height: 30px;
+
+    border: none;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+
+    justify-self: end;
+
+    background-color: #96A479;
+    color: white;
+}
+
+p {
+    grid-area: text2;
+    text-underline: none;
+    color: #96A479;
+    text-decoration: none;
+
+    font-family: 'Steppe', serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+}
+
+.reg {
+    grid-area: reg;
+    justify-self: end;
+}

@@ -1,0 +1,102 @@
+a {
+    text-underline: none;
+    color: #96A479;
+    text-decoration: none;
+
+    font-family: 'Steppe', serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: 'Arkhip', serif;
+    color: #96A479;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+}
+
+form {
+    display: grid;
+    grid-template-columns: 180px 120px;
+    grid-template-areas: "phone phone" "email email" "password password" "password2 password2"
+                        "btn1 btn1" "text auth";
+    row-gap: 20px;
+
+    align-items: center;
+}
+
+input {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #96A479;
+    outline: none;
+    color: #96A479;
+    padding: 4px 0 4px 15px;
+
+}
+
+input::placeholder {
+    color: #96A479;
+}
+
+#phone {
+    grid-area: phone;
+}
+
+#email {
+    grid-area: email;
+}
+
+#password {
+    grid-area: password;
+}
+
+#password-con {
+    grid-area: password2;
+}
+
+
+button {
+    grid-area: btn;
+    width: 100px;
+    height: 30px;
+
+    border: none;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+
+    justify-self: end;
+
+    background-color: #96A479;
+    color: white;
+}
+
+.btn1 {
+    grid-area: btn1;
+    width: 200px;
+}
+
+p {
+    grid-area: text;
+    text-underline: none;
+    color: #96A479;
+    text-decoration: none;
+
+    font-family: 'Steppe', serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+}
+
+.auth {
+    grid-area: auth;
+    justify-self: end;
+}

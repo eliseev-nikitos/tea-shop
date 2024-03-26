@@ -1,0 +1,146 @@
+
+/* main */
+
+
+h1 {
+    font-family: 'Arkhip', serif;
+    color: #96A479;
+    margin-top: 40px;
+    text-transform: lowercase;
+}
+
+/*  */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 570px 1fr;
+    column-gap: 30px;
+}
+
+.product-img {
+    width: 570px;
+    height: 506px;
+}
+
+@media (max-width: 1000px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 30px;
+    }
+
+    .product-img {
+        width: 570px;
+        height: 506px;
+    }
+}
+
+@media (max-width: 680px) {
+    .product-img {
+        width: 80vw;
+        height: auto;
+    }
+
+    main {
+        margin: 0 30px;
+    }
+}
+
+/*  */
+
+.instruction {
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #96A479;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-price {
+    margin-top: 30px;
+
+
+}
+
+.product-price p {
+    margin: 0 0 20px 0;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.product-weight {
+    width: 80px;
+    height: 30px;
+    border: 1px solid #96A479;
+
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    background-color: white;
+    color: #96A479;
+
+    margin-right: 30px;
+}
+
+.product-weight:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.product-weight.active {
+    background-color: #96A479;
+    color: white;
+}
+
+.end-price {
+    padding: 4px 30px;
+    border: 1px solid #96A479;
+
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+    background-color: #96A479;
+    color: white;
+    font-weight: bold;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.product-info {
+    margin-top: 30px;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+}
+
+.block .btn{
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    border: none;
+
+    margin-top: 20px;
+}
+
+.block .btn:hover{
+    transform: scale(1.05);
+}
+
+.block .btn.change-btn {
+    background-color: #43acff;
+    color: white;
+}
+
+.block .btn.delete-btn {
+    background-color: #ff7171;
+    color: white;
+}

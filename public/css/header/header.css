@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Arkhip';
+    src: url('../../font/arkhip.eot'); /* IE 9 Compatibility Mode */
+    src: url('../../font/arkhip.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../../font/arkhip.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../font/arkhip.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../../font/arkhip.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../font/arkhip.svg#arkhip') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Steppe';
+    src: url('../../font/Steppe-SemiBold.eot'); /* IE 9 Compatibility Mode */
+    src: url('../../font/Steppe-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../../font/Steppe-SemiBold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../font/Steppe-SemiBold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../../font/Steppe-SemiBold.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'SteppeBolr';
+    src: url('../../font/Steppe-ExtraBold.eot'); /* IE 9 Compatibility Mode */
+    src: url('../../font/Steppe-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../../font/Steppe-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../../font/Steppe-ExtraBold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../../font/Steppe-ExtraBold.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /
+}
+
+main {
+    max-width: 1170px;
+    margin: 0 45px;
+    flex: 1;
+}
+
+@media screen and (min-width: 1220px) {
+    main {
+        margin: 0 auto;
+        width: 1170px;
+    }
+}
+
+/* header */
+
+.navbar {
+    background-image: url("../../image/header/list-1.png"),
+    url("../../image/header/list-2.png"), url("../../image/header/list-3.png"), url("../../image/header/list-4.png"),
+    url("../../image/header/list-5.png"), url("../../image/header/list-6.png"), url("../../image/header/list-3.png"), url("../../image/header/list-1.png");
+
+    background-repeat: no-repeat;
+    background-position: 40px 0, 200px -30px, 450px 20px, 650px -30px, 900px 30px, 1100px -10px, 1300px 20px, 1600px -10px;
+}
+
+nav a.navbar-brand {
+    font-family: 'Arkhip', serif;
+    color: white;
+    font-size: 30px;
+}
+
+.navbar .nav-item a {
+    color: #fff;
+    position: relative;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+
+@media screen and (min-width: 769px) {
+    .navbar .nav-item a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        background: repeat scroll 0 0 transparent;
+        height: 2px;
+        width: 0;
+        background: #fff;
+        transition: width 0.4s ease 0s, left 0.4s ease 0s;
+    }
+
+    .navbar .nav-item a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+
+
+.navbar .nav-item a:hover::after {
+    width: 100%;
+}

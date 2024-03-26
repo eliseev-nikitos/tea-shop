@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заварка чая</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header/header.css">
+    <link rel="stylesheet" href="css/footer/footer.css">
+    <link rel="stylesheet" href="css/catalog/instruction.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+<%- include('header.ejs') %>
+
+<main>
+
+    <h1>ЗАВАРКА ЧАЯ</h1>
+
+    <section class="instruction">
+        <div class="step">
+            <div class="name">1. Нагрейте воду</div>
+            <p class="step-text">Для большинства видов чая рекомендуется использовать свежую холодную воду. Нагрейте воду до нужной температуры. Обычно чай заваривают при температуре от 70°C до 100°C, в зависимости от предпочтений.</p>
+            <img src="image/other/right.png" alt="Стрелка">
+        </div>
+        <div class="step">
+            <div class="name">2. Подготовьте посуду</div>
+            <p class="step-text">Используйте чайник, заварочный чайник или чашку, которые лучше всего подходят для заварки выбранного чая. Убедитесь, что посуда чистая и не содержит неприятных запахов.</p>
+            <img src="image/other/right.png" alt="Стрелка">
+        </div>
+        <div class="step">
+            <div class="name">3. Замерьте количество чая</div>
+            <p class="step-text">Измерьте рекомендуемое количество чая в соответствии с инструкцией на упаковке. Обычно, на 200-250 мл воды берут чайную ложку на одну порцию, но это может варьироваться в зависимости от вида чая и предпочтений.</p>
+            <img src="image/other/right.png" alt="Стрелка">
+        </div>
+        <div class="step">
+            <div class="name">4. Залейте чай</div>
+            <p class="step-text">Положите чай в заварочный чайник или чашку и залейте горячей водой. Обычно чай заваривают от 2 до 5 минут, но время заваривания может различаться в зависимости от вида и интенсивности аромата, а также от предпочтений.</p>
+            <img src="image/other/right.png" alt="Стрелка">
+        </div>
+        <div class="step">
+            <div class="name">5. Отфильтруйте или уберите чай</div>
+            <p class="step-text">После заваривания удалите чайные листы из заварочного чайника или сита, если они использовались. Если вы заваривали чай в чашке, вы можете использовать чайную ложку или специальное ситечко, чтобы убрать чайные листы.</p>
+            <img src="image/other/right.png" alt="Стрелка">
+        </div>
+        <div class="step">
+            <div class="name">6. Подайте и наслаждайтесь</div>
+            <p class="step-text">Перелейте заваренный чай в чашку или чайник, при необходимости добавьте сахар, мед или лимон. Попробуйте чай и наслаждайтесь его ароматом и вкусом.</p>
+        </div>
+    </section>
+
+    <section class="comment">
+        <div class="comment-head">Замечание:</div>
+        <div class="comment-text">Продолжительность заваривания и количество чая могут меняться в зависимости от вида чая, предпочтений по интенсивности и вкусу.</div>
+        <div class="comment-text">Рекомендации по времени заваривания и количеству чая указаны на упаковке.</div>
+    </section>
+
+    <h2>Приятного чаепития!</h2>
+
+    <h2>Оставьте ваше пожелание нам!</h2>
+    <form id="feedbackForm">
+        <input type="text" id="name" name="name" placeholder="Имя" required>
+        <textarea id="message" name="message" placeholder="Введите ваше пожелание" cols="40" rows="5" required></textarea>
+        <button type="submit">Отправить пожелание</button>
+    </form>
+
+</main>
+<footer>
+    <div class="copy">©2023 заварушка</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/feedback.js"></script>
+</body>
+</html>

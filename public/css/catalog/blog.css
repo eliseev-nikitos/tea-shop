@@ -1,0 +1,152 @@
+/* main */
+
+
+h1 {
+    font-family: 'Arkhip', serif;
+    color: #96A479;
+    margin-top: 50px;
+}
+
+
+/* search block */
+
+.search {
+    display: grid;
+    grid-template-columns: 570px 130px ;
+    grid-template-areas: "input btn";
+
+    align-items: center;
+}
+
+.search input {
+    max-width: 570px;
+    border: 1px solid #96A479;
+    outline: none;
+    color: #96A479;
+    padding: 2px 0 2px 15px;
+}
+
+.search input::placeholder {
+    color: #96A479;
+}
+
+.search button {
+    width: 100px;
+    height: 30px;
+
+    border: none;
+    font-family: 'Steppe', serif;
+    font-size: 14px;
+
+    margin-left: 30px;
+
+    background-color: #96A479;
+    color: white;
+}
+
+.search button:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+
+@media (max-width: 768px) {
+    .search {
+        display: grid;
+        grid-template-columns: 100px 100px minmax(100px, 370px);
+        grid-template-areas: "input input input" "filter sort btn";
+        grid-row-gap: 10px;
+        align-items: center;
+    }
+
+    .search input {
+        width: 100%;
+        grid-area: input;
+    }
+
+
+    .search button {
+        grid-area: btn;
+        margin-left: 0;
+
+        justify-self: end;
+    }
+}
+
+@media (max-width: 425px) {
+    .search {
+        display: grid;
+        grid-template-columns: 100px 100px minmax(0, 370px);
+        grid-template-areas: "input input input" "btn btn btn";
+        grid-row-gap: 10px;
+        align-items: center;
+    }
+
+    .search input {
+        width: 100%;
+        grid-area: input;
+    }
+
+
+    .search button {
+        grid-area: btn;
+        margin-left: 0;
+
+        justify-self: end;
+    }
+
+}
+
+/*  */
+
+.blogs {
+    margin: 30px 0;
+}
+
+.blog {
+    margin-top: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+img.lg {
+    display: block;
+}
+
+img.md {
+    display: none;
+}
+
+img.sm {
+    display: none;
+}
+
+@media (max-width: 786px) {
+    img.lg {
+        display: none;
+    }
+
+    img.md {
+        display: block;
+    }
+
+    img.sm {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    img.lg {
+        display: none;
+    }
+
+    img.md {
+        display: none;
+    }
+
+    img.sm {
+        display: block;
+    }
+}

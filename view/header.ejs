@@ -1,0 +1,49 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #96A479;">
+        <div class="container-fluid container">
+            <!-- Логотип или название сайта -->
+            <a class="navbar-brand" href="/">ЗАВАРУШКА</a>
+
+            <!-- Кнопка для мобильного меню, если сайт адаптивный -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item bs-body-color">
+                        <a class="nav-link" href="/catalog">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/instruction">Заварка чая</a>
+                    </li>
+                    <% if (role === 'Гость') { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/auth">Авторизация</a>
+                        </li>
+                    <% } else { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Выход</a>
+                        </li>
+                    <% } %>
+
+                    <% if (role === 'Администратор') { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/users">Пользователи</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/tea">Добавить чай</a>
+                        </li>
+                    <% } %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stat">Статистика</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
